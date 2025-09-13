@@ -1,0 +1,19 @@
+.manage-offerings { max-width: 1100px; margin: 24px auto; }
+.manage-offerings h2 { margin-bottom: 16px; }
+
+.filters, .add-row { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.filters select, .add-row select, .add-row input { height: 36px; padding: 6px 10px; }
+.add-row .small { width: 110px; }
+
+.grid { width: 100%; border-collapse: collapse; }
+.grid th, .grid td { border-bottom: 1px solid #eee; padding: 10px; text-align: left; }
+.grid tbody tr:hover { background: #fafafa; }
+
+.btn { height: 32px; padding: 0 12px; border: 1px solid #ddd; background: #fff; border-radius: 6px; cursor: pointer; margin-right: 6px; }
+.btn.primary { background: #2d6cdf; color: #fff; border-color: #2d6cdf; }
+.btn.danger { background: #f8d7da; color: #7f1d1d; border-color: #f3b1b8; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.muted { color: #6b7280; }
+.center { text-align: center; }
+.subtitle { margin: 8px 0 16px; }

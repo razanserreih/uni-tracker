@@ -1,0 +1,193 @@
+/* Page */
+.manage-students {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #0f172a;
+}
+
+.manage-students h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manage-students h2::before {
+  content: "👩‍🎓";
+  font-size: 1.4rem;
+}
+
+/* Toolbar */
+.ms-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 0.6fr 0.8fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ms-toolbar input,
+.ms-toolbar select {
+  height: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0 12px;
+  background: #fff;
+  outline: none;
+  transition: box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.ms-toolbar input:focus,
+.ms-toolbar select:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 4px rgba(59,130,246,.15);
+}
+
+.btn {
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-primary:hover { background:#1d4ed8; }
+
+.btn-ghost {
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+.btn-ghost:hover { background:#eef2f7; }
+
+/* Table wrapper for overflow */
+.table-wrap {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(2,8,23,.04);
+}
+
+/* Table */
+.smart-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.smart-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f8fafc;
+  color: #334155;
+  text-align: left;
+  font-size: .86rem;
+  font-weight: 700;
+  padding: 14px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.smart-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.smart-table tbody tr:nth-child(even) {
+  background: #fcfdff;
+}
+
+.smart-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.row-edit {
+  background: #f0f7ff !important;
+  box-shadow: inset 0 0 0 2px rgba(59,130,246,.15);
+}
+
+/* Inputs inside table */
+.smart-input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #fff;
+}
+.smart-input:focus {
+  border-color: #93c5fd;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59,130,246,.12);
+}
+
+/* Status pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.badge.active { background:#ecfdf5; color:#065f46; border-color:#a7f3d0; }
+.badge.inactive { background:#fff7ed; color:#9a3412; border-color:#fed7aa; }
+.badge.graduated { background:#eef2ff; color:#3730a3; border-color:#c7d2fe; }
+.badge.suspended { background:#fef2f2; color:#991b1b; border-color:#fecaca; }
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-small {
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: .86rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+.btn-small:hover { background:#f8fafc; }
+
+.btn-danger {
+  background:#fee2e2; color:#991b1b; border-color:#fecaca;
+}
+.btn-danger:hover { background:#fecaca; }
+
+/* Helpers */
+.muted { color:#64748b; font-size:.9rem; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .ms-toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ms-toolbar {
+    grid-template-columns: 1fr;
+  }
+  .smart-table thead th:nth-child(4),
+  .smart-table tbody td:nth-child(4) { display:none; } /* hide email on xs */
+  .smart-table thead th:nth-child(6),
+  .smart-table tbody td:nth-child(6) { display:none; } /* hide enrollment on xs */
+}
