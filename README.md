@@ -43,5 +43,6 @@ cd uni-tracker
 
 ### 2. Setup the database
 - Install MySQL Workbench.
-- Download the .sql file from here ![SQL Ready To Run File()] 
+- Download the .sql file from [here](docs/uni_track_system(final product).sql)
+
 
