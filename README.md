@@ -32,17 +32,27 @@ Manage courses, student attendance and grades, generate performance reports, and
 ![Manage Grades](docs/ManageGrades.PNG)  
 
 ---
+## 🛠 Requirements
+- Node.js (v16+ recommended)
+- Visual Studio Code
+- MySQL Server & MySQL Workbench  
+- npm (comes with Node.js)  
 
+---
 ## 🚀 Getting Started
 
-### 1. Clone this repository
-```bash
-git clone https://github.com/razanserreih/uni-tracker.git
-cd uni-tracker
-```
-
-### 2. Setup the database
+### 1. Setup the database
 - Install MySQL Workbench.
-- Download the .sql file from [here](docs/uni_track_system(final product).sql)
+- Download the .sql file from [here](docs/uni_track_system.sql)
 
+### 2. Run the backend
+- Right-Click the attendance_backend folder in vs and click Open in integrated terminal Then Write: 
+cd attendance_backend
+npm install
+npm start
 
+### 3. Run the frontend
+- Right-Click the forntend folder in vs and click Open in integrated terminal Then Write: 
+cd frontend
+npm install
+npm start
